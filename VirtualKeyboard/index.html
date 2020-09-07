@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Keyboard | By Kaipo Wilmeth</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fbb7402eb2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Keyboard Fun!</h1>
+        <textarea
+          name="input-box"
+          id="input-box"
+          cols="30"
+          rows="10"
+          placeholder="Let Us Have Some Fun Learning About The Keyboard. Click To Start Typing!"
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'Let Us Have Some Fun Learning About The Keyboard. Click To Start Typing!'"
+        ></textarea>
+      </div>
+    </header>
+    <section class="keyboard-frame">
+      <div class="row row1">
+        <div class="el el1 special back-tick-btn">
+          <p>`</p>
+          <span>~</span>
+        </div>
+        <div class="el el1 number one-btn">
+          <p>1</p>
+          <span>!</span>
+        </div>
+        <div class="el el1 number two-btn">
+          <p>2</p>
+          <span>@</span>
+        </div>
+        <div class="el el1 number three-btn">
+          <p>3</p>
+          <span>#</span>
+        </div>
+        <div class="el el1 number four-btn">
+          <p>4</p>
+          <span>$</span>
+        </div>
+        <div class="el el1 number five-btn">
+          <p>5</p>
+          <span>%</span>
+        </div>
+        <div class="el el1 number six-btn">
+          <p>6</p>
+          <span>^</span>
+        </div>
+        <div class="el el1 number seven-btn">
+          <p>7</p>
+          <span>&</span>
+        </div>
+        <div class="el el1 number eight-btn">
+          <p>8</p>
+          <span>*</span>
+        </div>
+        <div class="el el1 number nine-btn">
+          <p>9</p>
+          <span>(</span>
+        </div>
+        <div class="el el1 number zero-btn">
+          <p>0</p>
+          <span>)</span>
+        </div>
+        <div class="el el1 special minus-sign-btn">
+          <p>-</p>
+          <span>_</span>
+        </div>
+        <div class="el el1 special equals-sign-btn">
+          <p>=</p>
+          <span>+</span>
+        </div>
+        <div class="el el1 delete-btn">
+          <!-- <img src="../assets/x-mark.svg" alt="delete-btn" /> -->
+          <p>delete</p>
+        </div>
+      </div>
+      <div class="row row2">
+        <div class="el el2 tab-btn">
+          <p>tab</p>
+        </div>
+        <div class="el el2 letter q-btn">
+          <p>Q</p>
+        </div>
+        <div class="el el2 letter w-btn">
+          <p>W</p>
+        </div>
+        <div class="el el2 letter e-btn">
+          <p>E</p>
+        </div>
+        <div class="el el2 letter r-btn">
+          <p>R</p>
+        </div>
+        <div class="el el2 letter t-btn">
+          <p>T</p>
+        </div>
+        <div class="el el2 letter y-btn">
+          <p>Y</p>
+        </div>
+        <div class="el el2 letter u-btn">
+          <p>U</p>
+        </div>
+        <div class="el el2 letter i-btn">
+          <p>I</p>
+        </div>
+        <div class="el el2 letter o-btn">
+          <p>O</p>
+        </div>
+        <div class="el el2 letter p-btn">
+          <p>P</p>
+        </div>
+        <div class="el el2 special forward-bracket-btn">
+          <p>[</p>
+          <span>{</span>
+        </div>
+        <div class="el el2 special backward-bracket-btn">
+          <p>]</p>
+          <span>}</span>
+        </div>
+        <div class="el el2 special backward-slash-btn">
+          <p>\</p>
+          <span>|</span>
+        </div>
+      </div>
+      <div class="row row3">
+        <div class="el-caps el3 caps-lock-btn">
+          <span></span>
+          <p>caps lock</p>
+        </div>
+        <div class="el el3 letter a-btn">
+          <p>A</p>
+        </div>
+        <div class="el el3 letter s-btn">
+          <p>S</p>
+        </div>
+        <div class="el el3 letter d-btn">
+          <p>D</p>
+        </div>
+        <div class="el el3 letter f-btn">
+          <p>F</p>
+        </div>
+        <div class="el el3 letter g-btn">
+          <p>G</p>
+        </div>
+        <div class="el el3 letter h-btn">
+          <p>H</p>
+        </div>
+        <div class="el el3 letter j-btn">
+          <p>J</p>
+        </div>
+        <div class="el el3 letter k-btn">
+          <p>K</p>
+        </div>
+        <div class="el el3 letter l-btn">
+          <p>L</p>
+        </div>
+        <div class="el el3 special semi-colon-btn">
+          <p>;</p>
+          <span>:</span>
+        </div>
+        <div class="el el3 special quote-btn">
+          <p>'</p>
+          <span>"</span>
+        </div>
+        <div class="el el3 enter-btn">
+          <p id="return">return</p>
+          <p id="enter">enter</p>
+        </div>
+      </div>
+      <div class="row row4">
+        <div class="el-shift el4 shift-btn left-shift-btn">
+          <p>shift</p>
+        </div>
+        <div class="el el4 letter z-btn">
+          <p>Z</p>
+        </div>
+        <div class="el el4 letter x-btn">
+          <p>X</p>
+        </div>
+        <div class="el el4 letter c-btn">
+          <p>C</p>
+        </div>
+        <div class="el el4 letter v-btn">
+          <p>V</p>
+        </div>
+        <div class="el el4 letter b-btn">
+          <p>B</p>
+        </div>
+        <div class="el el4 letter n-btn">
+          <p>N</p>
+        </div>
+        <div class="el el4 letter m-btn">
+          <p>M</p>
+        </div>
+        <div class="el el4 special comma-btn">
+          <p>,</p>
+          <span><</span>
+        </div>
+        <div class="el el4 special period-btn">
+          <p>.</p>
+          <span>></span>
+        </div>
+        <div class="el el4 special forward-slash-btn">
+          <p>/</p>
+          <span>?</span>
+        </div>
+        <div class="el-shift el4 shift-btn right-shift-btn">
+          <p>shift</p>
+        </div>
+      </div>
+      <div class="row row5">
+        <div class="el el5 fn-btn">
+          <p>fn</p>
+        </div>
+        <div class="el el5 control-btn">
+          <p>control</p>
+        </div>
+        <div class="el el5 option-btn left-option-btn">
+          <p>option</p>
+          <span>alt</span>
+        </div>
+        <div class="el el5 command-btn left-command-btn">
+          <p>command</p>
+          <span><img src="./assets/command-mark.svg" alt="command-img" /></span>
+        </div>
+        <div class="el el5 space-bar-btn"></div>
+        <div class="el el5 command-btn right-command-btn">
+          <p>command</p>
+          <span><img src="./assets/command-mark.svg" alt="command-img" /></span>
+        </div>
+        <div class="el el5 option-btn right-option-btn">
+          <p>option</p>
+          <span>alt</span>
+        </div>
+        <div class="el5 arrow-keys-container">
+          <div class="arrows-row-1">
+            <div class="arrow dummy"></div>
+            <div class="arrow up-key">
+              <i class="fas fa-caret-up"></i>
+            </div>
+            <div class="arrow dummy"></div>
+          </div>
+          <div class="arrows-row-2">
+            <div class="arrow left-key">
+              <i class="fas fa-caret-left"></i>
+            </div>
+            <div class="arrow down-key">
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="arrow right-key">
+              <i class="fas fa-caret-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+    <script src="./jquery.js"></script>
+  </body>
+</html>

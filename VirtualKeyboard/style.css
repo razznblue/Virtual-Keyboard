@@ -1,0 +1,423 @@
+/* ---- Global Styles ---- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  color: rgb(26, 26, 26);
+}
+body {
+  background: url(../assets/space2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* ---- Header Styles ---- */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 40vh;
+  width: 100%;
+}
+.header-container h1 {
+  font-size: 4.2rem;
+  font-family: "Slackey", cursive;
+  margin: 1rem 0 1rem 0;
+  color: white;
+}
+.header-container #input-box {
+  max-height: 26vh;
+  width: 50%;
+  max-width: 100vw;
+  padding: 1rem;
+  font-size: 3rem;
+  border: 4px solid black;
+  border-radius: 12px;
+  outline: 1px;
+}
+.header-container #input-box:focus {
+  border: 4px solid rgb(182, 228, 114);
+}
+.header-container #input-box::placeholder {
+  color: black;
+}
+
+/* ---- Keyboard-Frame ---- */
+.keyboard-frame {
+  min-height: 55vh;
+  width: 80%;
+  background: rgb(137, 137, 138);
+  background: #0b3c49;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.row {
+  min-height: 9.2vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.row p {
+  font-weight: bold;
+}
+
+/* ---- Global Styles for all rows ---- */
+.el,
+.el-caps,
+.el-shift,
+.arrow {
+  min-height: 9vh;
+  width: 8%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  background: rgb(245, 244, 244);
+  border-radius: 6px;
+  margin-top: 0.3rem;
+}
+.el:hover,
+.el-caps:hover,
+.el-shift:hover,
+.arrow:hover {
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: rgb(170, 169, 169) !important;
+}
+
+.el:active,
+.el-caps:active,
+.el-shift:active,
+.arrow:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+/* ---- Row 1 Styles ---- */
+.el1 {
+  width: 8%;
+  margin-bottom: 0.3rem;
+}
+.delete-btn {
+  width: 13%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.delete-btn p {
+  font-size: 1.8rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+/* ---- Row 2 Styles ---- */
+.el2 {
+  margin-bottom: 0.3rem;
+}
+.tab-btn {
+  width: 12%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.tab-btn p {
+  margin: 0 0 0.5rem 0.5rem;
+  font-size: 1.7rem;
+}
+
+/* ---- Row 3 Styles ---- */
+.el3 {
+  margin-top: 0.2rem;
+}
+.caps-lock-btn {
+  width: 14%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.caps-lock-btn p {
+  margin: 0 0 0.5rem 0.5rem;
+  font-size: 1.7rem;
+}
+.enter-btn {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#enter {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+#return {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+/* ---- Row 4 Styles ---- */
+.el4 {
+  margin-top: 0.5rem;
+}
+.shift-btn {
+  width: 18%;
+}
+.left-shift-btn {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.left-shift-btn p {
+  margin: 0 0 0.5rem 0.5rem;
+  font-size: 1.7rem;
+}
+.right-shift-btn {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+.right-shift-btn p {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+}
+
+/* ---- Row 5 Styles ---- */
+.space-bar-btn {
+  width: 45%;
+}
+.fn-btn {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.fn-btn p {
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem 0.5rem;
+}
+.control-btn {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.control-btn p {
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.option-btn {
+  display: flex;
+  margin: 0 0.5 0.5 0.5;
+}
+.left-option-btn {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.left-option-btn p {
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem 0.5rem;
+}
+.left-option-btn span {
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
+.right-option-btn {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.right-option-btn p {
+  font-size: 1.7rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+.right-option-btn span {
+  font-size: 1.6rem;
+  margin: 0.5rem 0.5rem 0 0;
+}
+.command-btn {
+  display: flex;
+  font-size: 1.7rem;
+}
+.command-btn:hover {
+  font-size: 1.8rem;
+}
+.command-btn img {
+  width: 30px;
+  height: 30px;
+}
+.left-command-btn img {
+  margin-right: -1.3rem;
+  margin-top: -0.1rem;
+}
+.left-command-btn {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.left-command-btn p {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+.left-command-btn span {
+  margin: 0.5rem 0.5rem 0 0;
+}
+.right-command-btn {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.right-command-btn p {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+.right-command-btn span {
+  margin: 0.5rem 0 0 0.5rem;
+}
+.el5 {
+  min-height: 6.5rem;
+  margin-bottom: 0;
+}
+
+.arrow-keys-container {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  background: none;
+}
+.arrow-keys-container:hover {
+  background: none;
+}
+.arrow {
+  min-height: 3rem;
+  width: 7rem;
+  background: white;
+  margin: 0.3rem;
+}
+.arrows-row-1 {
+  display: flex;
+  justify-content: center;
+}
+.arrows-row-2 {
+  display: flex;
+  flex-direction: row;
+}
+.dummy {
+  background: #0b3c49;
+}
+
+/* ---- Other Styles ---- */
+
+.pressedCapsLock {
+  background: rgb(209, 208, 208);
+}
+.unPressedCapsLock {
+  background: rgb(245, 244, 244);
+}
+.btn-animation {
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+.undo-btn-animation {
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+/* ---- Media Queries ---- */
+
+@media screen and (max-width: 1400px) {
+  .command-btn p {
+    font-size: 1.2vw;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .command-btn p {
+    font-size: 1.1vw;
+  }
+  .option-btn p,
+  .option-btn span,
+  .delete-btn p,
+  .control-btn p,
+  .shift-btn p,
+  .fn-btn p,
+  .caps-lock-btn p,
+  .tab-btn p,
+  #enter,
+  #return {
+    font-size: 1.3vw;
+  }
+  .letter p,
+  .number,
+  .special {
+    font-size: 1.2vw;
+  }
+  .command-btn img {
+    width: 5vw;
+    height: 5vh;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .option-btn p,
+  .option-btn span,
+  .delete-btn p,
+  .control-btn p,
+  .shift-btn p,
+  .fn-btn p,
+  .caps-lock-btn p,
+  .tab-btn p,
+  #enter,
+  #return {
+    font-size: 1.2vw;
+  }
+  .letter p,
+  .number,
+  .special {
+    font-size: 1.2vw;
+  }
+  .command-btn img {
+    width: 4vw;
+    height: 4vh;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .letter p,
+  .number,
+  .special {
+    font-size: 1.1vw;
+  }
+}
+@media screen and (max-width: 1074px) {
+  .upkey {
+    width: 25%;
+  }
+  .command-btn img {
+    min-width: 3vw;
+    min-height: 3vh;
+  }
+}
+@media screen and (max-width: 745px) {
+  .command-btn p {
+    display: none;
+  }
+  .command-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .command-btn img {
+    width: 1vw;
+    height: 1vh;
+  }
+}
